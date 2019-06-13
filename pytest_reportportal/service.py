@@ -77,7 +77,7 @@ class PyTestServiceClass(with_metaclass(Singleton, object)):
         self._item_parts = {}
 
     def init_service(self, endpoint, project, uuid, log_batch_size,
-                     ignore_errors, ignored_tags):
+                     ignore_errors, ignored_tags, verify_ssl=False):
         self._errors = queue.Queue()
         if self.RP is None:
             self.ignore_errors = ignore_errors
