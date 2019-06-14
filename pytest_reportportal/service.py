@@ -93,7 +93,7 @@ class PyTestServiceClass(with_metaclass(Singleton, object)):
                 token=uuid,
                 error_handler=self.async_error_handler,
                 log_batch_size=log_batch_size,
-                verify_ssl=False
+                # verify_ssl=False
             )
             self.project_settiings = None # self.RP.rp_client.get_project_settings() if self.RP else None
             self.issue_types = self.get_issue_types()
